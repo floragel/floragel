@@ -319,22 +319,23 @@
                 <div class="col-lg-7">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
                         <h1 class="display-5 text-center mb-5">Donnez-nous vos précieux retour</h1>
+                        <form id="contact-form">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="gname" placeholder="Gurdian Name">
+                                    <input type="text" class="form-control bg-light border-0" id="name" name="name" placeholder="Name">
                                     <label for="gname">Votre Nom</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email">
+                                    <input type="email" class="form-control bg-light border-0" id="mail" name="mail" placeholder="Email">
                                     <label for="gmail">Votre Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -342,12 +343,41 @@
                                 <button class="btn btn-primary py-3 px-4" type="submit">Envoyez</button>
                             </div>
                         </div>
+                        </form>
+                        <div id="response"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Quote End -->
+
+    <!-- JS --><script>
+
+            emailjs.init("service_so52dna"); // Remplace par ton ID utilisateur EmailJS
+
+        document.getElementById('contact-form').addEventListener('submit', (event) => {
+            event.preventDefault(); // Empêche le rechargement de la page
+
+            const serviceID = "ton_service_id"; // Remplace par ton service ID
+            const templateID = "ton_template_id"; // Remplace par ton template ID
+
+            const params = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+            };
+
+            emailjs.send(serviceID, templateID, params)
+                .then((response) => {
+                    document.getElementById('response').innerHTML = `<p style="color:green;">Message envoyé avec succès !</p>`;
+                }, (error) => {
+                    document.getElementById('response').innerHTML = `<p style="color:red;">Erreur : ${error.text}</p>`;
+                });
+        });
+
+
+</script>
 
 
     <!-- Copyright Start -->
