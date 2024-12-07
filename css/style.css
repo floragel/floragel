@@ -451,16 +451,19 @@ h6,
 .testimonial-carousel .owl-item img {
     width: 100px;
     height: 100px;
+    border-radius: 50%; /* Ajoutez ceci pour des images rondes */
+    object-fit: cover; /* Assure un bon ajustement de l'image */
 }
 
 .testimonial-carousel .owl-nav {
     margin-top: 30px;
     display: flex;
+    justify-content: center; /* Centrer les boutons */
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
-    margin-right: 15px;
+    margin: 0 10px;
     width: 45px;
     height: 45px;
     display: flex;
@@ -468,16 +471,24 @@ h6,
     justify-content: center;
     color: var(--primary);
     background: var(--light);
-    border-radius: 4px;
+    border-radius: 8px; /* Rond ou carré selon le design */
     font-size: 22px;
-    transition: .5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
     color: var(--light);
+    transform: scale(1.1); /* Petit zoom à l'hover */
 }
+
+.testimonial-carousel .owl-nav .owl-prev:focus,
+.testimonial-carousel .owl-nav .owl-next:focus {
+    outline: 2px solid var(--primary);
+}
+
 
 
 /*** Footer ***/
