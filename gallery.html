@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -30,29 +30,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init("YwUQqZ_DA69FJhHto");
-        })();
-    </script>
-    
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <script src="mail.js"></script>
 </head>
 
 <body>
@@ -61,6 +38,7 @@
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
+
 
 
     <!-- Topbar Start -->
@@ -83,7 +61,6 @@
         </div>
     </div>
     <!-- Topbar End -->
-
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center; padding: 0 20px; margin: 0 auto; height: 120px;">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -101,81 +78,76 @@
 <!-- Navbar End -->
 
 
-
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">Contactez Nous</h1>
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Galerie</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galerie</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Contactez Nous</p>
-                    <h1 class="display-5 mb-5">Si vous avez des questions, contactez nous</h1>
-                    <form id="contact-form" onsubmit="sendMail(); return false;">
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="name" name="name" placeholder="Name">
-                                    <label for="gname">Votre Nom</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-light border-0" id="mail" name="mail" placeholder="Email">
-                                    <label for="gmail">Votre Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="submit" value="Envoyez">Envoyez</button>
-                            </div>
-                        </div>
-                        </form>
+         
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="fs-5 fw-bold text-primary">Photos</p>
+            <h1 class="display-5 mb-5">Des photos de la création de nos gels</h1>
+        </div>
+        <div class="row g-4 portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/3.jpg" alt="">
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
-                    <div class="position-relative rounded overflow-hidden h-100">
-                        <iframe class="position-relative w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5592.8377760563535!2d-73.6254676249268!3d45.50164563094116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc919ecf21016c9%3A0xfc1c3168738d36c9!2sColl%C3%A8ge%20Jean-de-Br%C3%A9beuf!5e0!3m2!1sfr!2sca!4v1736298635514!5m2!1sfr!2sca"
-                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/9.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/10.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/11.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/2.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="portfolio-inner rounded">
+                    <img class="img-fluid" src="img/6.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Projects End -->
 
 
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Floragel</a>, All Right Reserved.
-                    <img src="img/jaquebeclogo.jpg" style="width: 60px; height: 60px;">
-                </div>
+  <!-- Copyright Start -->
+  <div class="container-fluid copyright py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Floragel</a>, All Right Reserved.
+                <img src="img/jaquebeclogo.jpg" style="width: 60px; height: 60px;">
             </div>
         </div>
     </div>
-    <!-- Copyright End -->
+</div>
+<!-- Copyright End -->
 
 
     <!-- Back to Top -->
