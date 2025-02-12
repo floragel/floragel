@@ -53,9 +53,41 @@
         }
     </script>
     <script src="mail.js"></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/01/22/01/20250122011517-3T99JLHE.js"></script>
 </head>
 
 <body>
+
+<!-- Promo Banner Start -->
+<div id="promo-banner" class="text-center py-2">
+    <marquee behavior="scroll" direction="left" scrollamount="12">
+        📢 <strong>PRIX EN RÉDUCTION !</strong> Ancien prix : <span style="text-decoration: line-through; color: #ff4d4d;">12,50$</span> ➝ <span style="color: #46a758; font-weight: bold;">Maintenant seulement 7$ !</span> 🌱 Profitez-en !
+    </marquee>
+</div>
+<!-- Promo Banner End -->
+
+<style>
+    #promo-banner {
+        background-color: #f8d210; /* Couleur jaune pour attirer l’attention */
+        color: #333; /* Texte en couleur foncée */
+        font-size: 18px;
+        font-weight: bold;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+        padding-top: 40px; /* Ajuster pour éviter que la bannière cache le contenu */
+    }
+</style>
+
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
@@ -163,6 +195,33 @@
     </div>
     <!-- Contact End -->
 
+    <div id="bp-webchat"></div>
+<script src="https://cdn.botpress.cloud/webchat/v0.0.1/webchat.js"></script>
+<script>
+  window.botpress.on("webchat:ready", (conversationId) => {
+                 
+                });
+                window.botpress.init({
+                    "botId": "2f080ca1-0197-4984-b802-0b3bef47179d",
+                    "configuration": {
+                      "composerPlaceholder": "Parlez avec notre chatbot...",
+                      "botName": "Floragel",
+                      "botAvatar": "https://files.bpcontent.cloud/2025/01/22/01/20250122011833-XUFK46I3.png",
+                      "website": {},
+                      "email": {},
+                      "phone": {},
+                      "termsOfService": {},
+                      "privacyPolicy": {},
+                      "color": "#46a758",
+                      "variant": "solid",
+                      "themeMode": "light",
+                      "fontFamily": "rubik",
+                      "radius": 3
+                    },
+                    "clientId": "afd27f53-2b71-4e10-bff3-51fb0becb67d"
+                  });
+</script>
+    
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">

@@ -63,6 +63,34 @@
 </head>
 
 <body>
+<!-- Promo Banner Start -->
+<div id="promo-banner" class="text-center py-2">
+    <marquee behavior="scroll" direction="left" scrollamount="12">
+        📢 <strong>PRIX EN RÉDUCTION !</strong> Ancien prix : <span style="text-decoration: line-through; color: #ff4d4d;">12,50$</span> ➝ <span style="color: #46a758; font-weight: bold;">Maintenant seulement 7$ !</span> 🌱 Profitez-en !
+    </marquee>
+</div>
+<!-- Promo Banner End -->
+
+<style>
+    #promo-banner {
+        background-color: #f8d210; /* Couleur jaune pour attirer l’attention */
+        color: #333; /* Texte en couleur foncée */
+        font-size: 18px;
+        font-weight: bold;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+        padding-top: 40px; /* Ajuster pour éviter que la bannière cache le contenu */
+    }
+</style>
+
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
@@ -216,6 +244,14 @@
                                     <i class="fa fa-leaf fa-3x text-primary"></i>
                                 </div>
                                 <h4 class="mb-0">Matériaux De Qualité
+                                </h4>
+                            </div>
+                            <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                    <i class="fa fa-leaf fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="mb-0">Prix : <span style="text-decoration: line-through; color: gray; font-size: 18px;">12,50$</span> 
+                                    <span style="color: #348e38; font-weight: bold; font-size: 22px;">7$</span>
                                 </h4>
                             </div>
                         </div>
@@ -482,6 +518,55 @@
     </div>
     <!-- Team End -->
 
+    <br><br><br><br><br>
+    
+    <!-- Top Feature Start -->
+    <div class="container-fluid top-feature py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-leaf"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Mission :</h4>
+                                <span>Notre mission est de faciliter l’hydratation des plantes avec une solution naturelle, simple et efficace</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Vision :</h4>
+                                <span>Notre vision est de devenir l'une des références en terme d'hydratation végétale et innovante</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Valeurs :</h4>
+                                <span>Nos valeurs sont : l'innovation, la simplicité, la durabilité et enfin le bien-être des plantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Feature End -->
 
     <!-- Quote Start -->
     <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
