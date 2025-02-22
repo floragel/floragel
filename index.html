@@ -72,22 +72,112 @@
 <!-- Promo Banner End -->
 
 <style>
-    #promo-banner {
-        background-color: #f8d210; /* Couleur jaune pour attirer l’attention */
-        color: #333; /* Texte en couleur foncée */
-        font-size: 18px;
-        font-weight: bold;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
 
-    body {
-        padding-top: 40px; /* Ajuster pour éviter que la bannière cache le contenu */
+#promo-banner {
+    background-color: #f8d210; /* Couleur jaune */
+    color: #333; /* Texte foncé */
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 30px;
+    padding: 8px 0; /* Augmente la hauteur */
+    transition: top 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Augmente la hauteur de la topbar et ajoute un espace entre elle et la promo banner */
+.container-fluid.bg-dark {
+    margin-top: 50px; /* Crée un espace entre la promo banner et la topbar */
+    padding: 12px 0; /* Augmente la hauteur de la topbar */
+    font-size: 18px; /* Texte légèrement plus grand */
+}
+
+/* Ajuste la navbar pour éviter qu'elle ne soit trop basse */
+.navbar {
+    margin-top: 0;
+}
+
+/* Désactive l'effet hover sur les images de la section Projects Start */
+.portfolio-inner:hover::before,
+.portfolio-inner:hover::after {
+    width: 0 !important;
+}
+
+.portfolio-inner .portfolio-text {
+    opacity: 0 !important;
+}
+
+/* Désactive toute transformation sur hover */
+.portfolio-inner img {
+    transition: none !important;
+}
+
+/* Désactive le fond foncé sur hover */
+.portfolio-inner {
+    background: transparent !important;
+}
+
+/* Style du message d'invitation au chatbot */
+#chatbot-invite {
+    position: fixed;
+    bottom: 80px; /* Ajuste pour aligner avec le bouton du chatbot */
+    right: 30px;
+    max-width: 280px;
+    z-index: 9999;
+}
+
+.chatbot-message {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #46a758;
+}
+
+.chatbot-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chatbot-message p {
+    margin: 8px 0;
+}
+
+.chatbot-timestamp {
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 </style>
 
 
@@ -643,7 +733,16 @@
     </div>
     <!-- Testimonial End -->
 
-
+<!-- Chatbot Invitation Message -->
+<div id="chatbot-invite">
+    <div class="chatbot-message">
+        <div class="chatbot-header">
+            <img src="logo1.png" alt="Chatbot" class="chatbot-avatar">
+            <span>Floragel Chatbot</span>
+        </div>
+        <p>Bienvenue ! Besoin d'aide ? Cliquez ici pour discuter avec notre chatbot. 😊</p>
+    </div>
+</div>
 
     <div id="bp-webchat"></div>
 <script src="https://cdn.botpress.cloud/webchat/v0.0.1/webchat.js"></script>
@@ -704,6 +803,41 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        let lastScrollTop = 0;
+        const promoBanner = document.getElementById("promo-banner");
+        
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (currentScroll > lastScrollTop && currentScroll > 50) {
+                // Scroll vers le bas -> cacher la bannière
+                promoBanner.style.top = "-50px";
+            } else {
+                // Scroll vers le haut -> montrer la bannière
+                promoBanner.style.top = "0";
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        let chatbotInvite = document.getElementById("chatbot-invite");
+        if (chatbotInvite) {
+            chatbotInvite.style.display = "none";
+        }
+    }, 10000); // Disparaît après 10 secondes
+
+    document.getElementById("chatbot-invite").addEventListener("click", function () {
+        this.style.display = "none"; // Disparaît au clic
+    });
+});
+
+    </script>
 </body>
 
 </html>
