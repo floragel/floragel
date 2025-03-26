@@ -50,9 +50,24 @@
     transition: none !important;
 }
 
+.portfolio-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.portfolio-item {
+    padding: 10px;
+}
+
 /* Désactive le fond foncé sur hover */
 .portfolio-inner {
     background: transparent !important;
+}
+
+.portfolio-item {
+    box-sizing: border-box;
 }
 
 </style>
@@ -150,105 +165,34 @@
 <!-- Projects Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-bold text-primary">Photos</p>
-            <h1 class="display-5 mb-5">Des photos de la création de nos gels</h1>
-        </div>
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/3.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/9.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/10.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/11.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/2.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/6.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/13.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/14.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/15.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/16.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/17.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/18.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/19.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/4.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/21.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/22.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/23.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/24.jpg" alt="">
-                </div>
-            </div>
-        </div>
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <p class="fs-5 fw-bold text-primary">Photos</p>
+        <h1 class="display-5 mb-5">Des photos de la création de nos gels</h1>
+      </div>
+      <div class="row g-4">
+        <!-- Images -->
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/3.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/9.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/10.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/11.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/2.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/6.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/13.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/14.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/15.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/16.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/17.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/18.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/19.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/4.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/21.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/22.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/23.jpg" alt=""></div></div>
+        <div class="col-lg-4 col-md-6 col-sm-12"><div class="portfolio-inner rounded"><img class="img-fluid w-100" src="img/24.jpg" alt=""></div></div>
+      </div>
     </div>
-</div>
-<!-- Projects End -->
+  </div>
+  <!-- Projects End -->
 
 <div id="bp-webchat"></div>
 <script src="https://cdn.botpress.cloud/webchat/v0.0.1/webchat.js"></script>
