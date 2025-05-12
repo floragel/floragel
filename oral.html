@@ -170,8 +170,9 @@
                 <div id="carousel-items" class="mb-4">
                     <img id="carousel-image" class="img-fluid rounded mb-3" src="img/part1.png" alt="Document 1" style="height: 100%; width: 100%; display: none; border: none; margin: 0 auto; display: block;">
                     <iframe id="carousel-pdf" style="display: none; border: none; margin: 0 auto; display: block;" src=""></iframe>
+                    <a id="open-pdf-btn" class="btn btn-outline-secondary mt-2" style="display: none;" target="_blank">📄 Ouvrir le PDF dans un nouvel onglet</a>
                     <h5 id="carousel-caption">Introduction : Présentation de Floragel et choix de l'exposé</h5>
-                    <p id="carousel-counter" class="text-muted">1 / 11</p>
+                    <p id="carousel-counter" class="text-muted">1 / 14</p>
                 </div>
                 <div class="d-flex justify-content-center mt-3">
                     <button class="btn btn-primary me-2" onclick="changeSlide(-1)">← Précédent</button>
@@ -189,6 +190,9 @@
                     { src: "img/Affiche.jpeg", caption: "Affiche de vente", height: "50%", width: "50%" },
                     { src: "img/Affiche de vente floragel.png", caption: "Affiche de vente", height: "40%", width: "40%" },
                     { src: "img/affiche floragel saint valentin.png", caption: "Affiche de notre promotion", height: "40%", width: "40%" },
+                    { src: "img/App-JA.png", caption: "Application JA Québec", height: "110%", width: "110%" },
+                    { src: "img/Section-app-JA.png", caption: "Section dans l'application JA Québec", height: "110%", width: "110%" },
+                    { src: "img/RH-JA.png", caption: "Ressource Humaines - JA Québec", height: "125%", width: "125%" },
                     { src: "img/livre general.png", caption: "Grand Livre Général", height: "100%", width: "100%" },
                     { caption: "État financier de Floragel", isPdf: true, pdfSrc: "etat-financier.pdf", height: "1000px", width: "70%" },
                     { src: "img/part4.png", caption: "Conclusion", height: "100%", width: "100%" }
@@ -200,6 +204,7 @@
                     currentSlide = (currentSlide + direction + slides.length) % slides.length;
                     const image = document.getElementById("carousel-image");
                     const pdfFrame = document.getElementById("carousel-pdf");
+                    const pdfBtn = document.getElementById("open-pdf-btn");
 
                     if (slides[currentSlide].isPdf) {
                         image.style.display = "none";
@@ -207,12 +212,15 @@
                         pdfFrame.src = slides[currentSlide].pdfSrc;
                         pdfFrame.style.height = slides[currentSlide].height;
                         pdfFrame.style.width = slides[currentSlide].width;
+                        pdfBtn.style.display = "inline-block";
+                        pdfBtn.href = slides[currentSlide].pdfSrc;
                     } else {
                         image.style.display = "block";
                         pdfFrame.style.display = "none";
                         image.src = slides[currentSlide].src;
                         image.style.height = slides[currentSlide].height;
                         image.style.width = slides[currentSlide].width;
+                        pdfBtn.style.display = "none";
                     }
 
                     document.getElementById("carousel-caption").textContent = slides[currentSlide].caption;
